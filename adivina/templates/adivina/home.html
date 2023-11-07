@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <form action="{% url 'guess' %}" method="post" >
+        {% csrf_token %}
+        <input type="number" name="guess" required>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
